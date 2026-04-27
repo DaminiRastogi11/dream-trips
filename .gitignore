@@ -1,0 +1,34 @@
+# ---- IDE / editor noise ----
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ---- OS junk ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- PHP / Composer (in case you add Composer later) ----
+vendor/
+composer.lock
+
+# ---- Local logs and caches ----
+*.log
+*.cache
+
+# ---- User uploads at runtime (don't commit user data) ----
+/uploads/
+/tmp/
+
+# ---- Local environment overrides ----
+# If you later move DB creds out of config.php into a real .env,
+# this keeps secrets off GitHub.
+.env
+.env.local
+config.local.php
+
+# ---- Database dumps that aren't the canonical seed file ----
+# Keep travel_itinerary_db.sql (the seed). Ignore ad-hoc backups.
+*.bak.sql
+backup_*.sql

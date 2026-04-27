@@ -1,0 +1,542 @@
+/* ---------------------------------------------
+   GLOBAL BACKGROUND
+---------------------------------------------- */
+
+body {
+    background:
+        radial-gradient(circle at 0% 0%, rgba(255, 56, 92, 0.18), transparent 45%),
+        radial-gradient(circle at 100% 0%, rgba(124, 58, 237, 0.18), transparent 45%),
+        radial-gradient(circle at 50% 100%, rgba(14, 165, 233, 0.14), transparent 45%),
+        url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=compress&cs=tinysrgb&w=1920')
+        no-repeat center center fixed;
+    background-size: cover;
+    background-blend-mode: screen, screen, screen, normal;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -0.01em;
+}
+
+/* ---------------------------------------------
+   NAVBAR
+---------------------------------------------- */
+
+.navbar-airbnb {
+    background: rgba(0, 0, 0, 0.90) !important;
+    backdrop-filter: blur(12px);
+    /* Sit above .page-wrapper, which creates its own stacking context
+       via backdrop-filter and otherwise eats the dropdown. */
+    position: relative;
+    z-index: 1040;
+}
+
+/* Bootstrap dropdowns default to z-index:1000 — bump them above the
+   blurred page-wrapper card and make the panel visually solid. */
+.navbar-airbnb .dropdown-menu {
+    z-index: 1050;
+    background-color: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    border: none;
+    border-radius: 12px;
+    padding: 6px 0;
+}
+
+.navbar-airbnb .dropdown-menu .dropdown-item {
+    padding: 8px 16px;
+    font-weight: 500;
+}
+
+.navbar-airbnb .dropdown-menu .dropdown-item:hover {
+    background-color: #ffe6eb;
+    color: #ff385c;
+}
+
+.navbar-airbnb .dropdown-menu .dropdown-item.text-danger:hover {
+    background-color: #ff385c;
+    color: #ffffff !important;
+}
+
+.navbar-airbnb .navbar-brand,
+.navbar-airbnb .nav-link {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+.navbar-airbnb .nav-link:hover {
+    color: #ffb3c6 !important;
+}
+
+/* Hide the up/down spinner buttons on number inputs across browsers */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* Password show/hide toggle */
+.pw-wrapper {
+    position: relative;
+}
+.pw-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #888;
+    font-size: 0.85rem;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+.pw-toggle:hover {
+    color: #ff385c;
+    background: rgba(255, 56, 92, 0.08);
+}
+
+/* ---------------------------------------------
+   PAGE WRAPPER (GLASS CARD)
+---------------------------------------------- */
+
+.page-wrapper {
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(14px);
+    padding: 40px;
+    margin: 40px auto;
+    border-radius: 20px;
+    max-width: 1200px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+}
+
+
+/* ---------------------------------------------
+   STEP TEXT
+---------------------------------------------- */
+
+.step-text {
+    font-size: 14px;
+    color: #333 !important;
+    opacity: 0.9;
+    font-weight: 500;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+/* ---------------------------------------------
+   HERO
+---------------------------------------------- */
+
+.hero {
+    background: linear-gradient(135deg, #ffdadc, #ffd8f0);
+    padding: 40px 40px;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.20);
+    margin-bottom: 32px;
+}
+
+.hero-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #222;
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    color: #555;
+}
+
+/* ---------------------------------------------
+   BUTTONS
+---------------------------------------------- */
+
+.btn-primary {
+    background-color: #ff385c !important;
+    border: none !important;
+    border-radius: 999px !important;
+}
+
+.btn-primary:hover {
+    background-color: #e61e4d !important;
+}
+
+.btn-outline-primary {
+    color: #ff385c !important;
+    border-radius: 999px !important;
+    border-color: #ff385c !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: #ff385c !important;
+    color: #fff !important;
+}
+
+/* ---------------------------------------------
+   TRAVEL CARDS
+---------------------------------------------- */
+
+.travel-card {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.20);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: none;
+}
+
+.travel-card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.travel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 40px rgba(0,0,0,0.30);
+}
+
+.city {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* ---------------------------------------------
+   TITLES
+---------------------------------------------- */
+
+.page-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #222;
+    text-align: center;
+}
+
+.page-subtitle {
+    font-size: 0.98rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+/* ---------------------------------------------
+   SUMMARY TABLE
+---------------------------------------------- */
+
+.table-summary th {
+    background: #ffe6eb;
+}
+
+.total-row {
+    background: #ffe6eb;
+    font-weight: 700;
+}
+
+/* ---------------------------------------------
+   AUTH PAGES
+---------------------------------------------- */
+
+.auth-card {
+    width: 420px;
+    border-radius: 20px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.4);
+}
+
+.auth-card input {
+    border-radius: 12px !important;
+}
+
+/* ---------------------------------------------
+   Unified Action Buttons (Airbnb style)
+---------------------------------------------- */
+
+.action-btn {
+    padding: 10px 22px !important;
+    border-radius: 999px !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    text-decoration: none !important;
+}
+
+/* Variants */
+.action-btn.primary {
+    background-color: #ff385c !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.action-btn.primary:hover {
+    background-color: #e61e4d !important;
+}
+
+.action-btn.outline {
+    border: 2px solid #ff385c !important;
+    color: #ff385c !important;
+    background: transparent !important;
+}
+
+.action-btn.outline:hover {
+    background: #ff385c !important;
+    color: #fff !important;
+}
+
+.action-btn.danger {
+    background-color: #ff3b30 !important;
+    color: white !important;
+    border: none !important;
+}
+
+.action-btn.danger:hover {
+    background-color: #d92a20 !important;
+}
+
+.steps-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.step {
+    padding: 8px 18px;
+    background: rgba(255,255,255,0.4);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    font-weight: 600;
+    color: #444;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.step:hover {
+    transform: scale(1.08);
+    background: rgba(255,255,255,0.7);
+}
+
+.step.active {
+    background: #ff4f73;
+    color: white;
+    box-shadow: 0 0 12px rgba(255,79,115,0.8);
+}
+
+
+.kpi-card {
+    background: linear-gradient(135deg, #ffffff 0%, #fff5f7 100%);
+    border-radius: 18px;
+    transition: transform 0.25s, box-shadow 0.25s;
+    position: relative;
+    overflow: hidden;
+}
+.kpi-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent 60%, rgba(255,56,92,0.08) 100%);
+    pointer-events: none;
+}
+.kpi-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(0,0,0,0.12) !important;
+}
+
+.kpi-label {
+    font-size: 0.72rem;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.kpi-value {
+    font-size: 2.1rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ff385c 0%, #ff8a4c 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+}
+
+/* ----- Analytics page gradient KPI variants (cycle through hues) ----- */
+.kpi-card.kpi-pink   { background: linear-gradient(135deg, #ff385c 0%, #ff7a9e 100%); }
+.kpi-card.kpi-violet { background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%); }
+.kpi-card.kpi-blue   { background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%); }
+.kpi-card.kpi-emerald{ background: linear-gradient(135deg, #10b981 0%, #34d399 100%); }
+.kpi-card.kpi-amber  { background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%); }
+.kpi-card.kpi-rose   { background: linear-gradient(135deg, #e11d48 0%, #fb7185 100%); }
+
+.kpi-card.kpi-pink, .kpi-card.kpi-violet, .kpi-card.kpi-blue,
+.kpi-card.kpi-emerald, .kpi-card.kpi-amber, .kpi-card.kpi-rose {
+    color: #ffffff;
+}
+.kpi-card.kpi-pink .kpi-label, .kpi-card.kpi-violet .kpi-label, .kpi-card.kpi-blue .kpi-label,
+.kpi-card.kpi-emerald .kpi-label, .kpi-card.kpi-amber .kpi-label, .kpi-card.kpi-rose .kpi-label {
+    color: rgba(255, 255, 255, 0.85);
+}
+.kpi-card.kpi-pink .kpi-value, .kpi-card.kpi-violet .kpi-value, .kpi-card.kpi-blue .kpi-value,
+.kpi-card.kpi-emerald .kpi-value, .kpi-card.kpi-amber .kpi-value, .kpi-card.kpi-rose .kpi-value {
+    background: none;
+    -webkit-text-fill-color: #ffffff;
+    color: #ffffff;
+}
+
+/* ----- Profile page ----- */
+.profile-hero {
+    background: linear-gradient(135deg, #ff385c 0%, #7c3aed 100%);
+    color: #ffffff;
+    padding: 32px;
+    border-radius: 22px;
+    box-shadow: 0 14px 40px rgba(124, 58, 237, 0.25);
+}
+.profile-avatar {
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    font-weight: 800;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    flex-shrink: 0;
+}
+.profile-name {
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+.profile-email {
+    opacity: 0.92;
+    font-size: 1rem;
+    margin-top: 4px;
+}
+.profile-since {
+    opacity: 0.75;
+    font-size: 0.85rem;
+}
+.profile-stats {
+    border-radius: 18px;
+    background: #ffffff;
+}
+.profile-stat-icon {
+    font-size: 1.6rem;
+    opacity: 0.5;
+}
+.profile-quick {
+    border-radius: 18px;
+}
+.profile-quick .quick-link {
+    display: block;
+    padding: 10px 12px;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background 0.15s;
+}
+.profile-quick .quick-link:hover {
+    background: #fff5f7;
+    color: #ff385c;
+}
+.profile-quick .quick-link.text-danger:hover {
+    background: rgba(255, 59, 48, 0.08);
+}
+.profile-form {
+    border-radius: 18px;
+}
+
+/* ----- Analytics ----- */
+.analytics-hero {
+    background: linear-gradient(135deg, #ff385c 0%, #ff7a4c 60%, #f59e0b 100%);
+    color: #ffffff;
+    padding: 28px 32px;
+    border-radius: 22px;
+    box-shadow: 0 14px 40px rgba(255, 56, 92, 0.25);
+    margin-bottom: 24px;
+}
+.analytics-hero h2 {
+    color: #ffffff;
+    font-weight: 800;
+    margin: 0;
+}
+.analytics-hero p {
+    color: rgba(255, 255, 255, 0.92);
+    margin: 4px 0 0;
+}
+.section-title {
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 24px 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.section-title .bi {
+    color: #ff385c;
+}
+.chart-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 20px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-input {
+    width: 60%;
+    padding: 14px;
+    border-radius: 40px;
+    border: none;
+    font-size: 1rem;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+}
+
+.search-btn {
+    padding: 14px 28px;
+    background: #ff385c;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    background: #e11b43;
+    transform: scale(1.05);
+}
+
+
+.travel-card {
+    transition: 0.35s ease;
+    border-radius: 18px;
+}
+
+.travel-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+
+.hero, .travel-card, .search-container {
+    animation: fadeIn 0.8s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+
+
