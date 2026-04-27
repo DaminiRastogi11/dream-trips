@@ -2,8 +2,8 @@
 
 A full-stack travel planning web app that turns scattered trip-planning notes (Google Docs, group chats, browser tabs, half-finished spreadsheets) into a single, day-by-day itinerary with budgets, dates, and analytics.
 
-**Live demo:** _add your InfinityFree URL once deployed_
-**Repo:** _add your GitHub URL_
+* **Live demo:** 
+* **Repo:** https://github.com/DaminiRastogi11/dream-trips
 
 ---
 
